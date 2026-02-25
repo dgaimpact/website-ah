@@ -971,8 +971,18 @@
     text-align: right;
   }
 
+  .footer-login {
+    font-size: 0.75rem;
+    color: var(--accent-ah);
+    text-decoration: none;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transition: color 0.2s;
+  }
+  .footer-login:hover { color: var(--gray-300); }
   .footer-legal {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 4px;
   }
@@ -985,6 +995,14 @@
   }
 
   .footer-legal a:hover { color: var(--gray-400); }
+  .footer-login {
+    font-size: 0.75rem;
+    color: var(--accent-ah);
+    text-decoration: none;
+    margin-top: 4px;
+    transition: color 0.2s;
+  }
+  .footer-login:hover { color: var(--gray-300); }
 
   /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
@@ -1374,11 +1392,11 @@
     <div class="footer-right">
       <span>© 2026 DGA Impact Inc.™ All rights reserved.</span>
       <div class="footer-address">7190 Morrison Street · Niagara Falls, ON L2E 7K5 · Canada</div>
+      <a href="https://ah.dgaimpact.com/login" class="footer-login" target="_blank">Account Login →</a>
       <div class="footer-legal">
         <a href="https://vvskswbyviypujwbpmor.supabase.co/storage/v1/object/public/legal-documents/dga-impact-privacy-policy-v1.pdf" target="_blank">Privacy Policy</a>
         <a href="https://vvskswbyviypujwbpmor.supabase.co/storage/v1/object/public/legal-documents/authority-hub-terms-of-service-v1.pdf" target="_blank">Terms of Service</a>
         <a href="https://vvskswbyviypujwbpmor.supabase.co/storage/v1/object/public/legal-documents/authority-hub-acceptable-use-policy-v1.pdf" target="_blank">Acceptable Use Policy</a>
-        <a href="https://ah.dgaimpact.com/login" target="_blank">Account Login</a>
       </div>
     </div>
   </div>
