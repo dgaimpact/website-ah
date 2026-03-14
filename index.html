@@ -1684,7 +1684,7 @@ function ahAddMsg(text, type) {
   label.textContent = type === "bot" ? "Atlas" : "You";
   const bubble = document.createElement("div");
   bubble.className = "ah-msg-bubble";
-  bubble.textContent = text;
+  bubble.innerHTML = text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br>");
   wrap.appendChild(label);
   wrap.appendChild(bubble);
   ahMsgs.appendChild(wrap);
