@@ -1566,10 +1566,9 @@ const ahFlows = {
     ]
   },
   pricing: {
-    text: "Authority Hub has two tiers:\n\n\u2022 AH Solo \u2014 $299/mo \u00b7 Individual professional\n\u2022 AH Playbook Hub \u2014 $499/mo \u00b7 Manages up to 5 team members\n\nA 30-day free trial is available \u2014 no credit card required to start.\n\nMortgage brokers using both Authority Hub and Mortgage Insight Lab\u2122 can access the DGA Pro bundle at a 15\u201320% discount.",
+    text: "Authority Hub has two tiers:\n\n\u2022 AH Solo \u2014 $299/mo \u00b7 Individual professional\n\u2022 AH Playbook Hub \u2014 $499/mo \u00b7 Manages up to 5 team members",
     replies: [
       { label: "What's included?", next: "whatIsAh" },
-      { label: "Tell me about DGA Pro", next: "milBundle" },
       { label: "Book a demo", next: "bookDemo" },
       { label: "\u2190 Start over", next: "welcome" }
     ]
@@ -1626,18 +1625,10 @@ const ahFlows = {
       { label: "\u2190 Start over", next: "welcome" }
     ]
   },
-  milBundle: {
-    text: "Authority Hub pairs with Mortgage Insight Lab\u2122 \u2014 MIL's book intelligence feeds your AH content engine so your authority content is backed by real operational data, not just marketing claims.\n\nTogether they're available as DGA Pro at a 15\u201320% discount.",
-    replies: [
-      { label: "Tell me about MIL", next: "milInfo" },
       { label: "Book a demo", next: "bookDemo" },
       { label: "\u2190 Back", next: "pricing" }
     ]
   },
-  milInfo: {
-    text: "Mortgage Insight Lab\u2122 connects to your loan origination system and analyzes your book \u2014 no spreadsheets, no manual exports.\n\nYou get a Book Health Score, an Opportunity Engine that flags refinance and renewal opportunities, a Living Book Valuation, and AI-powered rate intelligence.\n\nCombined with Authority Hub as DGA Pro, it's the full stack for mortgage broker growth.",
-    replies: [
-      { label: "Book a DGA Pro demo", next: "bookDemo" },
       { label: "\u2190 Back", next: "milBundle" }
     ]
   },
