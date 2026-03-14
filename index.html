@@ -1672,6 +1672,7 @@ const BOOKING_URL = "https://calendar.app.google/YpNVukMm8pTRsLmYA";
 
 let ahCurrentNode = "welcome";
 let ahAwaitingEmail = false;
+let ahLeadData = {};
 const ahMsgs = document.getElementById("ahMessages");
 
 function ahResizeWindow() {
@@ -1732,6 +1733,9 @@ function ahAddReplies(replies) {
 function ahSelectReply(label, next) {
   document.querySelectorAll(".ah-qr").forEach(b => b.disabled = true);
   ahAddMsg(label, "user");
+  if (ahCurrentNode === "bookDemo") ahLeadData.profession = label;
+  if (ahCurrentNode === "demoMarket") ahLeadData.market = label;
+  if (ahCurrentNode === "demoChallenge") ahLeadData.challenge = label;
   ahCurrentNode = next;
   const flow = ahFlows[next];
   if (!flow) return;
@@ -1753,6 +1757,17 @@ function ahHandleSend() {
   if (ahAwaitingEmail && val.includes("@")) {
     ahAwaitingEmail = false;
     ahAddTyping();
+    fetch("https://dgaimpact.app.n8n.cloud/webhook/atlas-lead-capture", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: val,
+        profession: ahLeadData.profession || "",
+        market: ahLeadData.market || "",
+        challenge: ahLeadData.challenge || "",
+        source: "atlas-widget-ah"
+      })
+    }).catch(() => {});
     setTimeout(() => {
       ahRemoveTyping();
       ahAddMsg(ahFlows.confirmed.text, "bot");
