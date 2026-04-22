@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J7RT85BZRY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J7RT85BZRY');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Authority Hub™ — Be the Professional AI Recommends</title>
+<meta name="description" content="Clients are asking AI who to hire. Authority Hub™ makes sure it's you — with structured content, entity corroboration, and local market signals AI systems trust.">
+<meta property="og:title" content="Authority Hub™ — Be the Professional AI Recommends">
+<meta property="og:description" content="Clients are asking AI who to hire. Authority Hub™ makes sure it's you — with structured content, entity corroboration, and local market signals AI systems trust.">
+<meta property="og:image" content="https://ah.dgaimpact.com/ah-logo.png">
+<meta property="og:url" content="https://ah.dgaimpact.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Authority Hub™ — Be the Professional AI Recommends">
+<meta name="twitter:description" content="Clients are asking AI who to hire. Authority Hub™ makes sure it's you — with structured content, entity corroboration, and local market signals AI systems trust.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A1628;
+    --navy-light: #0f2240;
+    --violet: #8B5CF6;
+    --violet-light: #A78BFA;
+    --violet-dark: #7C3AED;
+    --violet-glow: rgba(139, 92, 246, 0.15);
+    --blue: #4A9FD8;
+    --blue-dark: #2E5A7D;
+    --green: #A4D65E;
+    --green-dark: #7FB842;
+    --red: #EF4444;
+    --red-dark: #B91C1C;
+    --white: #FFFFFF;
+    --gray-50: #F8FAFC;
+    --gray-100: #F1F5F9;
+    --gray-200: #E2E8F0;
+    --gray-300: #CBD5E1;
+    --gray-400: #94A3B8;
+    --gray-500: #64748B;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1E293B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--gray-800);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10, 22, 40, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+    padding: 0 2rem;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand { display: flex; align-items: center; gap: 12px; }
+  .nav-logo { width: 64px; height: 64px; border-radius: 10px; }
+  .nav-name {
+    font-size: 1.2rem; font-weight: 700; color: var(--white); letter-spacing: -0.02em;
+  }
+  .nav-name .tm {
+    color: var(--violet); font-size: 0.65em; vertical-align: super; margin-left: 1px;
+  }
+  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--gray-300); text-decoration: none; font-size: 0.9rem;
+    font-weight: 500; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--violet) !important;
+    color: var(--white) !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--violet-dark) !important; transform: translateY(-1px); }
+  .nav-parent { font-size: 0.75rem !important; color: var(--gray-500) !important; }
+  .nav-parent:hover { color: var(--gray-300) !important; }
+
+  /* ─── HERO (StoryBrand — problem-framed, single column, centered) ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--navy);
+    overflow: hidden;
+    padding: 96px 2rem 4rem;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 20s linear infinite;
+  }
+
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(60px, 60px); }
+  }
+
+  .hero-glow {
+    position: absolute; width: 600px; height: 600px;
+    border-radius: 50%; filter: blur(160px);
+  }
+  .hero-glow-1 { background: var(--violet); top: -200px; right: -100px; opacity: 0.12; }
+  .hero-glow-2 { background: var(--blue); bottom: -200px; left: -100px; opacity: 0.08; }
+
+  .hero-content {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--violet-light);
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.03em;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--violet-light);
+    animation: pulse 2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.5rem;
+    animation: fadeUp 0.8s ease 0.1s both;
+  }
+
+  h1 .highlight {
+    background: linear-gradient(135deg, var(--violet), var(--violet-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 1.25rem;
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin: 0 auto 2.5rem;
+    max-width: 680px;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s ease 0.3s both;
+  }
+
+  .btn-primary {
+    display: inline-flex; justify-content: center; min-width: 260px;
+    align-items: center; gap: 8px;
+    background: var(--violet);
+    color: var(--white);
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.25s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover {
+    background: var(--violet-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-flex; justify-content: center; min-width: 260px;
+    align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--white);
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.25s;
+  }
+  .btn-secondary:hover {
+    border-color: var(--violet);
+    background: rgba(139, 92, 246, 0.1);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-subnote {
+    margin-top: 1.75rem;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    animation: fadeUp 0.8s ease 0.4s both;
+  }
+
+  /* ─── PROOF BAR ─── */
+  .proof-bar {
+    background: var(--gray-50);
+    padding: 2.5rem 2rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .proof-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    gap: 3rem; flex-wrap: wrap;
+  }
+  .proof-item {
+    display: flex; align-items: center; gap: 10px;
+    color: var(--gray-500); font-size: 0.9rem; font-weight: 500;
+  }
+  .proof-check { color: var(--violet); font-weight: 700; }
+
+  /* ─── PROBLEM SECTION ─── */
+  .problem-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .problem-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .problem-card:hover {
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 12px 40px rgba(239, 68, 68, 0.08);
+    transform: translateY(-4px);
+  }
+
+  .problem-card-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--red);
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .problem-card-label::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+  }
+
+  .problem-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+
+  .problem-card p {
+    color: var(--gray-500);
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+
+  /* ─── GUIDE SECTION ─── */
+  .guide-section {
+    padding: 6rem 2rem;
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .guide-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .guide-inner .section-title { margin-left: auto; margin-right: auto; }
+  .guide-inner .section-sub {
+    margin-left: auto; margin-right: auto; max-width: 720px;
+    font-size: 1.15rem;
+  }
+
+  .guide-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  .guide-pillar {
+    padding: 1.5rem;
+  }
+
+  .guide-pillar-icon {
+    width: 44px; height: 44px;
+    background: var(--violet-glow);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .guide-pillar h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .guide-pillar p {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* ─── SECTIONS SHARED ─── */
+  .section-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--violet);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+    max-width: 760px;
+  }
+
+  .section-sub {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+    margin-bottom: 3.5rem;
+    max-width: 620px;
+    line-height: 1.65;
+  }
+
+  /* ─── PLAN (HOW IT WORKS) ─── */
+  .plan-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Step 1 — special row with snapshot visual */
+  .plan-step-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.04), rgba(74, 159, 216, 0.04));
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 20px;
+  }
+
+  .plan-step-hero-content .step-number {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    font-family: 'DM Mono', monospace;
+    background: var(--violet);
+    color: var(--white);
+  }
+
+  .plan-step-hero-content h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .plan-step-hero-content p {
+    color: var(--gray-600);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .plan-step-hero-content .plan-deliverable {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 8px;
+    color: var(--violet-dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+
+  /* Remaining steps grid */
+  .plan-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .plan-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+
+  .plan-card:hover {
+    border-color: var(--violet);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .plan-card .step-number {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    font-family: 'DM Mono', monospace;
+    background: var(--violet-glow);
+    color: var(--violet);
+  }
+
+  .plan-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    letter-spacing: -0.02em;
+  }
+
+  .plan-card p {
+    color: var(--gray-500);
+    line-height: 1.6;
+    font-size: 0.92rem;
+  }
+
+  /* Snapshot visual (was hero mockup — now in Plan Step 1) */
+  .snapshot-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .snapshot-mockup {
+    width: 100%;
+    max-width: 460px;
+    background: var(--navy-light);
+    border-radius: 16px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+  }
+
+  .mockup-bar {
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .mockup-dot:nth-child(1) { background: #FF5F57; }
+  .mockup-dot:nth-child(2) { background: #FFBD2E; }
+  .mockup-dot:nth-child(3) { background: #28CA42; }
+
+  .mockup-content { padding: 24px; }
+
+  .mockup-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .audit-score-row {
+    display: flex; align-items: center; gap: 16px; margin-bottom: 20px;
+  }
+
+  .audit-score-circle {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    border: 4px solid var(--violet);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .audit-score-circle::before {
+    content: '';
+    position: absolute; inset: -4px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: var(--violet-light);
+    animation: scoreSpin 3s linear infinite;
+  }
+
+  @keyframes scoreSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .audit-score-val {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--violet-light);
+  }
+
+  .audit-score-meta h4 {
+    color: var(--white); font-size: 0.9rem; font-weight: 600;
+  }
+  .audit-score-meta span { color: var(--gray-500); font-size: 0.75rem; }
+
+  .audit-bars {
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .audit-bar-item { display: flex; flex-direction: column; gap: 4px; }
+  .audit-bar-label { display: flex; justify-content: space-between; }
+  .audit-bar-label span {
+    font-size: 0.75rem; color: var(--gray-400); font-weight: 500;
+  }
+  .audit-bar-label strong {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--violet-light);
+  }
+
+  .audit-bar-bg {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .audit-bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--violet-dark), var(--violet));
+  }
+  .audit-bar-fill.blue {
+    background: linear-gradient(90deg, var(--blue-dark), var(--blue));
+  }
+  .audit-bar-desc { font-size: 0.65rem; color: var(--gray-500); margin-top: 2px; }
+
+  .mockup-entity {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: rgba(139, 92, 246, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 8px;
+  }
+  .mockup-entity-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--violet-light);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .mockup-entity p {
+    font-size: 0.78rem;
+    color: var(--gray-300);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* ─── WHAT YOU GET / FEATURES ─── */
+  .features-section {
+    padding: 6rem 2rem;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .features-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 30% 50%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 70% 50%, rgba(74, 159, 216, 0.05) 0%, transparent 50%);
+  }
+
+  .features-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .features-section .section-label { color: var(--violet-light); }
+  .features-section .section-title { color: var(--white); }
+  .features-section .section-sub { color: var(--gray-400); }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.25rem;
+    transition: all 0.3s;
+  }
+
+  .feature-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateY(-3px);
+  }
+
+  .feature-icon {
+    width: 48px; height: 48px;
+    border-radius: 10px;
+    background: rgba(139, 92, 246, 0.12);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+
+  .feature-card p {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  /* ─── STAKES (Success vs. Failure) ─── */
+  .stakes-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .stakes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .stakes-card {
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--gray-200);
+  }
+
+  .stakes-card.failure {
+    background: rgba(239, 68, 68, 0.03);
+    border-color: rgba(239, 68, 68, 0.2);
+  }
+
+  .stakes-card.success {
+    background: rgba(139, 92, 246, 0.04);
+    border-color: rgba(139, 92, 246, 0.25);
+  }
+
+  .stakes-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .stakes-card.failure .stakes-label { color: var(--red); }
+  .stakes-card.success .stakes-label { color: var(--violet); }
+
+  .stakes-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+
+  .stakes-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .stakes-card li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .stakes-card.failure li::before {
+    content: '✕';
+    color: var(--red);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .stakes-card.success li::before {
+    content: '✓';
+    color: var(--violet);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* ─── MARKETS ─── */
+  .markets-section {
+    padding: 6rem 2rem;
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .markets-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
+  }
+
+  .markets-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .markets-section .section-label { color: var(--violet-light); }
+  .markets-section .section-title { color: var(--white); }
+
+  .markets-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(139,92,246,0.2);
+    border-radius: 14px;
+    padding: 2.5rem;
+  }
+
+  .markets-card p {
+    color: #E2E8F0;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  .markets-card p:last-child { margin-bottom: 0; }
+
+  .markets-card .quebec-note {
+    color: var(--gray-400);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* ─── PRICING ─── */
+  .pricing-section {
+    padding: 6rem 2rem;
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .pricing-inner { max-width: 900px; margin: 0 auto; }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .price-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    transition: all 0.3s;
+    position: relative;
+  }
+
+  .price-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+  }
+
+  .price-card.featured {
+    border-color: var(--violet);
+    box-shadow: 0 0 0 1px var(--violet);
+  }
+
+  .price-card.featured::before {
+    content: 'Most Popular';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--violet);
+    color: var(--white);
+    padding: 4px 16px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .price-tier {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--violet);
+    margin-bottom: 0.5rem;
+  }
+
+  .price-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+
+  .price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--navy);
+    font-family: 'DM Mono', monospace;
+  }
+
+  .price-amount span {
+    font-size: 1rem;
+    color: var(--gray-400);
+    font-weight: 400;
+  }
+
+  .price-period {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .price-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .price-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--gray-600);
+  }
+
+  .price-features li::before {
+    content: '✓';
+    color: var(--violet);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .price-note {
+    margin-top: 2rem;
+    padding: 14px 18px;
+    background: rgba(139, 92, 246, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.12);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .price-note strong { color: var(--navy); }
+
+  /* ─── WHO IT'S FOR ─── */
+  .who-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .who-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 14px;
+    padding: 2rem;
+    transition: all 0.3s;
+  }
+
+  .who-card:hover {
+    border-color: var(--violet);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.08);
+    transform: translateY(-3px);
+  }
+
+  .who-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .who-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .who-card p {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* ─── FAQ ─── */
+  .faq-section {
+    padding: 6rem 2rem;
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .faq-inner { max-width: 800px; margin: 0 auto; position: relative; }
+
+  .faq-item {
+    border-bottom: 1px solid var(--gray-200);
+    padding: 1.5rem 0;
+  }
+
+  .faq-q {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 1.3rem;
+    color: var(--violet);
+    font-weight: 300;
+    transition: transform 0.3s;
+  }
+
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    color: var(--gray-600);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+  }
+
+  .faq-item.open .faq-a {
+    max-height: 400px;
+    padding-top: 0.25rem;
+  }
+
+  /* ─── CTA ─── */
+  .cta-section {
+    padding: 6rem 2rem;
+    background: var(--navy);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+  }
+
+  .cta-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .cta-inner h2 {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  .cta-inner p {
+    font-size: 1.15rem;
+    color: var(--gray-300);
+    margin-bottom: 2.5rem;
+    line-height: 1.65;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-trust {
+    margin-top: 1.5rem;
+    font-size: 0.82rem;
+    color: var(--gray-500);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 3rem 2rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+
+  .footer-brand { display: flex; align-items: center; gap: 16px; }
+  .footer-brand img { width: 64px; height: 64px; border-radius: 6px; }
+  .footer-info { display: flex; flex-direction: column; gap: 2px; }
+  .footer-info strong { color: var(--gray-300); font-size: 0.85rem; }
+  .footer-info span { color: var(--gray-500); font-size: 0.75rem; }
+
+  .footer-right {
+    display: flex; flex-direction: column; align-items: flex-end; gap: 4px;
+  }
+  .footer-right span { color: var(--gray-500); font-size: 0.75rem; }
+
+  .footer-address {
+    color: var(--gray-500);
+    font-size: 0.7rem;
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  .footer-legal {
+    display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 4px;
+  }
+
+  .footer-legal a {
+    font-size: 0.7rem;
+    color: var(--gray-500);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-legal a:hover { color: var(--gray-400); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    h1 { font-size: 2.75rem; }
+    .hero-sub { font-size: 1.05rem; }
+    .problem-grid,
+    .guide-pillars,
+    .plan-steps-grid,
+    .features-grid,
+    .who-grid,
+    .stakes-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .plan-step-hero {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .nav-links { display: none; }
+    .section-title, .cta-inner h2 { font-size: 2rem; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-actions { flex-direction: column; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+  }
+
+  /* ─── SCROLL ANIMATIONS ─── */
+  .animate-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <img src="ah-logo.png" alt="Authority Hub™" class="nav-logo">
+    <div class="nav-name">Authority Hub<span class="tm">™</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="https://dgaimpact.com" class="nav-parent">← DGA Impact Inc.™</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" target="_blank" class="nav-cta">Join the Beta →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO — StoryBrand problem-framed -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Beta Launching April 2026</div>
+    <h1>Clients Are Asking AI Who to Hire.<br><span class="highlight">Make Sure It's You.</span></h1>
+    <p class="hero-sub">You've built a career on referrals and reputation. But more clients are now asking ChatGPT, Perplexity, and Gemini for recommendations — and those systems don't know you exist. Authority Hub™ builds the signals AI needs to recommend you.</p>
+    <div class="hero-actions">
+      <a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" target="_blank" class="btn-primary">Book a Free Discovery Call →</a>
+      <a href="#how" class="btn-secondary">See How It Works</a>
+    </div>
+    <div class="hero-subnote">No commitment. 30-minute call. See if your market still has a seat.</div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<section class="proof-bar">
+  <div class="proof-inner">
+    <div class="proof-item"><span class="proof-check">✓</span> AI visibility audits across ChatGPT, Perplexity &amp; Gemini</div>
+    <div class="proof-item"><span class="proof-check">✓</span> Limited seats per profession, per market — capped across 165 Canadian markets</div>
+    <div class="proof-item"><span class="proof-check">✓</span> CASL &amp; PIPEDA compliant</div>
+    <div class="proof-item"><span class="proof-check">✓</span> Built for professionals who depend on trust</div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <div class="section-label animate-in">The Problem</div>
+  <h2 class="section-title animate-in">The Referral Engine Has Changed. Most Professionals Haven't Caught Up.</h2>
+  <p class="section-sub animate-in">Over half of web traffic is now automated. AI systems evaluate every professional online — and silently pick winners. Being good at your job is no longer enough.</p>
+  <div class="problem-grid">
+    <div class="problem-card animate-in">
+      <div class="problem-card-label">The External Problem</div>
+      <h3>You're invisible to AI.</h3>
+      <p>When someone asks ChatGPT "who's a good mortgage broker in my city?" your name isn't on the list — even if you're the best in town. AI systems read structured signals, not reputation.</p>
+    </div>
+    <div class="problem-card animate-in">
+      <div class="problem-card-label">The Internal Problem</div>
+      <h3>You built a career on word of mouth. The word is now a chatbot.</h3>
+      <p>Referrals used to come from clients. Now they come from AI recommending someone else. You're watching a new channel replace the old one, and you don't know how to compete.</p>
+    </div>
+    <div class="problem-card animate-in">
+      <div class="problem-card-label">The Philosophical Problem</div>
+      <h3>Clients will pick whoever AI names first.</h3>
+      <p>It shouldn't be the professional with the best marketing budget. It should be the one with real expertise, real credentials, and a real track record. But AI only picks what it can read.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section class="guide-section">
+  <div class="guide-inner">
+    <div class="section-label animate-in">The Guide</div>
+    <h2 class="section-title animate-in">We've Spent Two Years Figuring Out What AI Actually Rewards.</h2>
+    <p class="section-sub animate-in">Authority Hub™ is built by a mortgage broker who watched this shift happen in real time — and a platform team that reverse-engineered what makes AI recommend one professional over another. You don't need to figure this out alone.</p>
+    <div class="guide-pillars">
+      <div class="guide-pillar animate-in">
+        <div class="guide-pillar-icon">🇨🇦</div>
+        <h4>Built for Canadian Professionals</h4>
+        <p>PIPEDA-compliant, CASL-aware, regulated-profession-aware. Data stored in Canada. Your content reflects where you actually practice.</p>
+      </div>
+      <div class="guide-pillar animate-in">
+        <div class="guide-pillar-icon">🔬</div>
+        <h4>Methodology, Not Magic</h4>
+        <p>The P3 AI Visibility Audit measures exactly what AI systems look at. No black boxes. No "trust us." You see your score, your gaps, and what changes each month.</p>
+      </div>
+      <div class="guide-pillar animate-in">
+        <div class="guide-pillar-icon">🎯</div>
+        <h4>Scarcity-Backed Positioning</h4>
+        <p>Limited seats per profession, per market. If you're in, your competitors can't join. If you wait, they might.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN (HOW IT WORKS) -->
+<section class="plan-section" id="how">
+  <div class="section-label animate-in">The Plan</div>
+  <h2 class="section-title animate-in">A Simple 4-Step Path From Invisible to AI-Recommended</h2>
+  <p class="section-sub animate-in">One audit, one content engine, eight platforms, zero extra work from you. Here's exactly how it runs.</p>
+
+  <!-- Step 1 with snapshot visual -->
+  <div class="plan-step-hero animate-in">
+    <div class="plan-step-hero-content">
+      <div class="step-number">01</div>
+      <h3>Start With a Real AI Visibility Score</h3>
+      <p>We query ChatGPT, Perplexity, and Gemini the way your clients do — and score you on the five factors AI systems use to decide who to recommend. You get a baseline number, your biggest gaps, and a prioritized list of what to fix next.</p>
+      <div class="plan-deliverable">📊 Your P3 GEO Score · Delivered in Week 1</div>
+    </div>
+    <div class="snapshot-visual">
+      <div class="snapshot-mockup">
+        <div class="mockup-bar">
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+          <div class="mockup-dot"></div>
+        </div>
+        <div class="mockup-content">
+          <div class="mockup-title">AI Visibility Audit — GEO Score</div>
+          <div class="audit-score-row">
+            <div class="audit-score-circle">
+              <div class="audit-score-val">72</div>
+            </div>
+            <div class="audit-score-meta">
+              <h4>Steve Dainard</h4>
+              <span>Mortgage Broker · Niagara Falls, ON</span>
+            </div>
+          </div>
+          <div class="audit-bars">
+            <div class="audit-bar-item">
+              <div class="audit-bar-label">
+                <span>Niche Context</span>
+                <strong>17/25</strong>
+              </div>
+              <div class="audit-bar-bg"><div class="audit-bar-fill blue" style="width: 68%;"></div></div>
+              <div class="audit-bar-desc">How well AI understands your specialization</div>
+            </div>
+            <div class="audit-bar-item">
+              <div class="audit-bar-label">
+                <span>Entity Declaration</span>
+                <strong>18/20</strong>
+              </div>
+              <div class="audit-bar-bg"><div class="audit-bar-fill" style="width: 92%;"></div></div>
+              <div class="audit-bar-desc">How clearly AI can identify who you are</div>
+            </div>
+            <div class="audit-bar-item">
+              <div class="audit-bar-label">
+                <span>Credential Signals</span>
+                <strong>17/20</strong>
+              </div>
+              <div class="audit-bar-bg"><div class="audit-bar-fill" style="width: 85%;"></div></div>
+              <div class="audit-bar-desc">Credentials AI can verify</div>
+            </div>
+            <div class="audit-bar-item">
+              <div class="audit-bar-label">
+                <span>Platform Corroboration</span>
+                <strong>11/20</strong>
+              </div>
+              <div class="audit-bar-bg"><div class="audit-bar-fill blue" style="width: 54%;"></div></div>
+              <div class="audit-bar-desc">Consistent presence across platforms</div>
+            </div>
+            <div class="audit-bar-item">
+              <div class="audit-bar-label">
+                <span>Temporal Continuity</span>
+                <strong>9/15</strong>
+              </div>
+              <div class="audit-bar-bg"><div class="audit-bar-fill blue" style="width: 61%;"></div></div>
+              <div class="audit-bar-desc">Evidence of sustained activity</div>
+            </div>
+          </div>
+          <div class="mockup-entity">
+            <div class="mockup-entity-label">Canonical Entity Declaration</div>
+            <p>"Steve Dainard is a mortgage broker in Niagara Falls, Ontario specializing in first-time homebuyers."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Remaining steps 2, 3, 4 -->
+  <div class="plan-steps-grid">
+    <div class="plan-card animate-in">
+      <div class="step-number">02</div>
+      <h3>Capture Your Voice</h3>
+      <p>A guided Voice Blueprint interview captures how you actually speak — your tone, your examples, your vocabulary. Every piece of content we generate sounds like you, not a generic AI.</p>
+    </div>
+    <div class="plan-card animate-in">
+      <div class="step-number">03</div>
+      <h3>Generate Governed Content</h3>
+      <p>Each month, we produce a longform authority article that targets your top audit gaps — plus short-form pieces for every major platform. Structured for AI. Approved by you.</p>
+    </div>
+    <div class="plan-card animate-in">
+      <div class="step-number">04</div>
+      <h3>Publish Everywhere AI Looks</h3>
+      <p>Our OCGF™ pipeline auto-publishes to your Content Vault, Google Business Profile, LinkedIn, Facebook, Trust Network, and more — eight platforms from a single cycle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="features-inner">
+    <div class="section-label animate-in">What You Get</div>
+    <h2 class="section-title animate-in">Every Tool You Need to Win AI Recommendations</h2>
+    <p class="section-sub animate-in">Authority Hub™ isn't a content calendar or social media scheduler. It's an AI authority operating system.</p>
+    <div class="features-grid">
+      <div class="feature-card animate-in">
+        <div class="feature-icon">📊</div>
+        <div>
+          <h3>Monthly GEO Audits</h3>
+          <p>Automated visibility assessments across ChatGPT, Perplexity, and Gemini. Track your authority score over time and see exactly what's improving.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">🎙️</div>
+        <div>
+          <h3>Voice Blueprint Profile</h3>
+          <p>AI captures your natural speaking style through a guided interview. Every piece of content sounds like you, not a robot.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">📝</div>
+        <div>
+          <h3>Governed Content Pipeline</h3>
+          <p>Declarative artifacts that address your specific audit pressure points. Entity declarations, credential corroboration, niche expertise — all structured for AI comprehension.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">📡</div>
+        <div>
+          <h3>OCGF™ Multi-Platform Distribution</h3>
+          <p>Powered by our Omni Channel Growth Framework™ — auto-published to your Content Vault, Google Business Profile, LinkedIn, Facebook, Trust Network, YouTube, and podcast directories. Eight platforms from a single content cycle.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">🏛️</div>
+        <div>
+          <h3>Content Vault</h3>
+          <p>Your permanent, public-facing authority page on Authority Hub™. Every article, entity declaration, and credential signal lives here — structured with schema markup for AI crawlers.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">🌐</div>
+        <div>
+          <h3>Trust Network</h3>
+          <p>A public business directory connecting professionals across markets. AI systems see corroborated professional relationships — not just isolated profiles — strengthening entity recognition for everyone in the network.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">🎧</div>
+        <div>
+          <h3>Authority Hub™ Podcast</h3>
+          <p>Every content cycle automatically generates a podcast episode — published to YouTube, Spotify, Apple Podcasts, and more. Your name, profession, and market repeated across additional crawlable platforms. Zero effort.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">🔒</div>
+        <div>
+          <h3>Capped Market Seats</h3>
+          <p>Every market has a hard cap on seats per profession — 2 to 5 depending on market size, across 165 pre-defined Canadian markets. Less competition. More visibility.</p>
+        </div>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon">🤝</div>
+        <div>
+          <h3>Referral Network (Playbook Hub)</h3>
+          <p>Connect up to 5 complementary professionals in your market. Cross-reference each other in AI content, creating mutual authority signals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAKES (Success vs. Failure) -->
+<section class="stakes-section">
+  <div class="section-label animate-in">What's at Stake</div>
+  <h2 class="section-title animate-in">Two Paths. One Decision.</h2>
+  <p class="section-sub animate-in">AI recommendations aren't coming. They're already here. The question is whose name gets surfaced — yours or a competitor's.</p>
+  <div class="stakes-grid">
+    <div class="stakes-card failure animate-in">
+      <div class="stakes-label">Without Authority Hub™</div>
+      <h3>You stay invisible while competitors get cited.</h3>
+      <ul>
+        <li>Clients ask AI and hear someone else's name</li>
+        <li>Your reputation doesn't translate to structured data</li>
+        <li>You're still paying for ads, social, and SEO that don't address AI</li>
+        <li>Every month that passes, the gap widens</li>
+        <li>When you finally decide to act, your market may already be full</li>
+      </ul>
+    </div>
+    <div class="stakes-card success animate-in">
+      <div class="stakes-label">With Authority Hub™</div>
+      <h3>You become the professional AI recommends.</h3>
+      <ul>
+        <li>Your name surfaces when AI is asked in your market</li>
+        <li>Your expertise is finally legible to both humans and AI</li>
+        <li>One monthly cycle replaces scattered marketing effort</li>
+        <li>Your authority compounds month over month</li>
+        <li>You lock your seat before competitors claim it</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section class="markets-section">
+  <div class="markets-inner">
+    <div class="section-label animate-in">Coverage</div>
+    <h2 class="section-title animate-in">165 Pre-Defined Markets Across Canada</h2>
+    <p class="section-sub animate-in" style="color: var(--gray-400);">Every province and territory. Hard caps per profession. First movers lock their seat.</p>
+    <div class="markets-card animate-in">
+      <p>Authority Hub™ covers every province and territory in Canada with 165 pre-defined markets based on postal geography. Ontario leads with 94 markets, followed by British Columbia (23), Alberta (20), Manitoba (7), Saskatchewan (6), Nova Scotia (5), New Brunswick (4), Newfoundland &amp; Labrador (3), and Prince Edward Island, Yukon, and Northwest Territories/Nunavut with 1 each.</p>
+      <p>Every market has a hard cap on how many subscribers can hold the same profession — 5 seats in urban markets, 4 in suburban, 3 in rural, and 2 in seasonal markets. Once your market fills for your profession, new applicants are waitlisted.</p>
+      <p class="quebec-note">Quebec is not currently included. A dedicated phase is planned to ensure full compliance with Quebec's distinct regulatory and language requirements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-inner">
+    <div class="section-label animate-in">Pricing</div>
+    <h2 class="section-title animate-in">Transparent, Simple Pricing</h2>
+    <p class="section-sub animate-in">No setup fees. No hidden costs. Cancel anytime.</p>
+    <div class="pricing-grid">
+      <div class="price-card featured animate-in">
+        <div class="price-tier">Solo</div>
+        <h3>Solo Account</h3>
+        <div class="price-amount">$199<span> CAD/mo</span></div>
+        <div class="price-period">Your own AI visibility machine</div>
+        <ul class="price-features">
+          <li>Monthly AI visibility audit (GEO score)</li>
+          <li>3 governed content artifacts per month</li>
+          <li>Voice Blueprint Profile</li>
+          <li>Auto-publish to 8+ platforms</li>
+          <li>Capped market seats per profession</li>
+          <li>Content Vault (your public authority page)</li>
+          <li>Trust Network listing</li>
+          <li>Authority Hub™ Podcast episodes</li>
+        </ul>
+      </div>
+      <div class="price-card animate-in">
+        <div class="price-tier">Playbook Hub</div>
+        <h3>Hub + Spoke Network</h3>
+        <div class="price-amount">$299<span> CAD/mo</span></div>
+        <div class="price-period">Includes up to 5 Spoke accounts</div>
+        <ul class="price-features">
+          <li>Everything in Solo, plus:</li>
+          <li>Manage up to 5 referral partners</li>
+          <li>Cross-entity content corroboration</li>
+          <li>Two-voice podcast episodes</li>
+          <li>Network authority dashboard</li>
+          <li>Referral signal amplification</li>
+          <li>Power Group positioning</li>
+        </ul>
+      </div>
+    </div>
+    <div class="price-note animate-in">
+      <strong>Beta launching April 2026.</strong> Every market has a hard cap on seats per profession. Once your market fills up, new applicants are waitlisted.
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who-section" id="who">
+  <div class="section-label animate-in">Who It's For</div>
+  <h2 class="section-title animate-in">Built for Professionals Who Depend on Trust</h2>
+  <p class="section-sub animate-in">If your livelihood depends on your reputation and professional credentials, Authority Hub™ was built for you.</p>
+  <div class="who-grid">
+    <div class="who-card animate-in">
+      <div class="who-icon">🏦</div>
+      <h3>Mortgage Brokers</h3>
+      <p>Become the AI-recommended broker in your market. When someone asks ChatGPT "who's a good mortgage broker in Niagara Falls?" — make sure it's you.</p>
+    </div>
+    <div class="who-card animate-in">
+      <div class="who-icon">🏡</div>
+      <h3>Real Estate Agents</h3>
+      <p>Local market expertise is your edge. Authority Hub™ ensures AI systems recognize and surface that expertise to potential buyers and sellers.</p>
+    </div>
+    <div class="who-card animate-in">
+      <div class="who-icon">📊</div>
+      <h3>Financial Advisors</h3>
+      <p>Trust is everything in financial services. Build the AI authority signals that demonstrate your credibility to both humans and AI systems.</p>
+    </div>
+    <div class="who-card animate-in">
+      <div class="who-icon">⚖️</div>
+      <h3>Lawyers</h3>
+      <p>Practice area expertise in your jurisdiction, structured for AI comprehension. Be the attorney AI recommends, not just the one with the best Google ad.</p>
+    </div>
+    <div class="who-card animate-in">
+      <div class="who-icon">🩺</div>
+      <h3>Healthcare Practitioners</h3>
+      <p>Credentials and specializations verified through content, not claimed in a bio. AI systems need proof of expertise — Authority Hub™ provides it.</p>
+    </div>
+    <div class="who-card animate-in">
+      <div class="who-icon">💼</div>
+      <h3>Any Trust-Based Professional</h3>
+      <p>Accountants, consultants, insurance brokers, engineers — if clients choose you based on trust and expertise, you need AI to know that too.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="section-label animate-in">FAQ</div>
+    <h2 class="section-title animate-in">Common Questions</h2>
+    <div style="margin-top: 2.5rem;">
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is AI visibility and why does it matter?</div>
+        <div class="faq-a">Over 51% of web traffic is now automated — AI systems like ChatGPT, Perplexity, and Gemini are constantly evaluating your online presence to determine if you should be recommended to people asking for professionals in your area. If you're not optimized for AI comprehension, you're invisible to this growing channel.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is this different from SEO or social media marketing?</div>
+        <div class="faq-a">Traditional SEO optimizes for Google's search algorithm. Social media marketing targets human followers. Authority Hub™ optimizes for AI recommendation engines — a fundamentally different audience that requires structured, declarative content rather than persuasive marketing copy. Think of it as an evolution: SEO optimized for search engines, GEO (Generative Engine Optimization) optimizes for AI-generated answers, and AIO (AI Answer Optimization) ensures you're the one AI actually recommends.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much time does this take from me?</div>
+        <div class="faq-a">Complete a voice-based onboarding interview so we capture your expertise and personality. After that, we handle everything — monthly AI visibility audits, content creation in your voice, and publishing across key platforms. You'll spend about 15 minutes per month reviewing your dashboard.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why do I get a monthly AI visibility audit?</div>
+        <div class="faq-a">AI visibility isn't a one-time setup — it's a moving target. AI systems constantly re-evaluate who they trust and recommend. Your monthly audit measures how AI systems currently perceive you across five factors: Entity Declaration, Credential Signals, Niche Context, Platform Corroboration, and Temporal Continuity. Each audit identifies your biggest gaps, and that's exactly what drives next month's content — so every cycle is targeted at improving where you need it most.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where does my content actually get published?</div>
+        <div class="faq-a">Everywhere AI systems look. Each month, your authority article is published to your Content Vault profile page, then automatically distributed through our OCGF™ (Omni Channel Growth Framework™) to Google Business Profile, LinkedIn, and Facebook. You also get listed in the Trust Network™ directory. Coming soon, each article is converted into a podcast episode published to YouTube, Spotify, and Apple Podcasts. That's up to eight platforms from a single content cycle — with zero effort from you.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How are markets defined and how many seats are available?</div>
+        <div class="faq-a">Canada is divided into 165 pre-defined markets based on postal geography. Each market has a hard cap on how many subscribers can hold the same profession — ranging from 5 seats in urban markets down to 2 in seasonal markets. Ontario alone has 94 markets, BC has 23, Alberta has 20, and every other province and territory is covered. Once seats fill for your profession in your market, new applicants are waitlisted.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the difference between Solo and Playbook Hub?</div>
+        <div class="faq-a">Solo gives you the full AI visibility platform for yourself. Playbook Hub adds referral network capabilities — connect up to 5 professionals as Spokes under your Hub account. Each Spoke gets their own AI visibility audits, content pipeline, Content Vault page, and Trust Network listing. Your Trust Network pages cross-link to each other, creating mutual authority signals. It's a cross-profession referral network that AI can read.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if my referral partners aren't in my market?</div>
+        <div class="faq-a">No problem. With a Playbook Hub account, your Spokes can be any profession, anywhere in Canada or the US. They don't need to be in the same market or profession as you. Each Spoke gets the full Authority Hub™ experience — audits, content, Content Vault, and Trust Network listing — and your profiles cross-link to each other, strengthening both your AI authority signals.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How quickly will I see results?</div>
+        <div class="faq-a">Your baseline AI Visibility Score is established in your first week. Most subscribers see measurable improvement within 60–90 days as content cycles build momentum. AI systems need consistent, repeated signals before they change who they recommend — there's no overnight fix, but the trajectory is clear early. The sooner you start, the further ahead you are when your competitors catch on.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you guarantee AI will recommend me?</div>
+        <div class="faq-a">No — and anyone who does is lying. AI platforms are third-party systems outside anyone's control. What we do guarantee is that your online presence will be systematically built with the authority signals AI systems use to evaluate and recommend professionals. We control the infrastructure and the strategy, and we continuously monitor how AI visibility evolves. The results follow from doing the work consistently, which is exactly what the monthly audit-to-content cycle delivers.</div>
+      </div>
+      <div class="faq-item animate-in">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my data safe?</div>
+        <div class="faq-a">Yes. Authority Hub™ is built by DGA Impact Inc.™, a federally incorporated Canadian company. All subscriber data is stored in Canada and handled in compliance with PIPEDA and CASL. We never sell your data, and our privacy policy is available on our website.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2 class="animate-in">Claim Your Market<br>Before It Fills Up</h2>
+    <p class="animate-in">Beta launches April 2026 in Ontario, with national expansion underway. Every market has a hard cap on seats per profession — once they're gone, they're gone.</p>
+    <div class="cta-buttons animate-in">
+      <a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" class="btn-primary">Book a Free Discovery Call →</a>
+      <a href="mailto:info@dgaimpact.com" class="btn-secondary">Email Us</a>
+    </div>
+    <p class="cta-trust animate-in">165 Canadian markets · 2–5 seats per profession per market · Launching April 2026</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="ah-logo.png" alt="Authority Hub™">
+      <div class="footer-info">
+        <strong>Authority Hub™</strong>
+        <span>by DGA Impact Inc.™</span>
+      </div>
+    </div>
+    <div class="footer-right">
+      <span>© 2026 DGA Impact Inc.™ All rights reserved.</span>
+      <div class="footer-address">7190 Morrison Street · Niagara Falls, ON L2E 7K5 · Canada</div>
+      <div class="footer-legal">
+        <a href="https://app.dgaimpact.com/login" style="color: #94A3B8; text-decoration: none;">Account Login</a>
+        <a href="https://vvskswbyviypujwbpmor.supabase.co/storage/v1/object/public/legal-documents/dga-impact-privacy-policy-v2.pdf" target="_blank">Privacy Policy</a>
+        <a href="https://vvskswbyviypujwbpmor.supabase.co/storage/v1/object/public/legal-documents/authority-hub-terms-of-service-v2.pdf" target="_blank">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => { entry.target.classList.add('visible'); }, index * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+
+<!-- Atlas Chat Widget -->
+<div class="ah-widget">
+
+  <div class="ah-teaser" id="ahTeaser" onclick="openWidget()">
+    Got questions about <span style="color:#8B5CF6;font-weight:500;">Authority Hub</span>? Ask Atlas.
+  </div>
+
+  <div class="ah-window" id="ahWindow">
+    <div class="ah-header">
+      <div class="ah-header-avatar">AH</div>
+      <div class="ah-header-info">
+        <div class="ah-header-name">Atlas</div>
+        <div class="ah-header-status">Online now</div>
+      </div>
+      <button class="ah-close" onclick="closeWidget()">✕</button>
+    </div>
+    <div class="ah-messages" id="ahMessages"></div>
+    <div class="ah-input-row">
+      <input class="ah-input" id="ahInput" placeholder="Ask me anything..." onkeydown="ahHandleKey(event)" />
+      <button class="ah-send" onclick="ahHandleSend()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+    <div class="ah-footer">Powered by Authority Hub&#8482; &middot; DGA Impact Inc.&#8482;</div>
+  </div>
+
+  <div class="ah-bubble" id="ahBubble" onclick="openWidget()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      <circle cx="9" cy="10" r="0.8" fill="#8B5CF6" stroke="none"/>
+      <circle cx="12" cy="10" r="0.8" fill="#8B5CF6" stroke="none"/>
+      <circle cx="15" cy="10" r="0.8" fill="#8B5CF6" stroke="none"/>
+    </svg>
+  </div>
+
+</div>
+
+<style>
+.ah-widget * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'DM Sans', sans-serif; }
+.ah-widget { position: fixed; bottom: 0; right: 0; width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: flex-end; padding: 24px; pointer-events: none; z-index: 9999; }
+.ah-bubble { width: 52px; height: 52px; background: #0F172A; border: 1.5px solid #8B5CF6; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease; position: relative; z-index: 10; pointer-events: all; }
+.ah-bubble:hover { transform: scale(1.06); box-shadow: 0 0 0 6px rgba(139,92,246,0.12); }
+.ah-bubble svg { width: 22px; height: 22px; }
+.ah-teaser { position: fixed; bottom: 86px; right: 24px; background: #0F172A; border: 1px solid rgba(139,92,246,0.25); border-radius: 12px 12px 4px 12px; padding: 10px 14px; font-size: 13px; color: #CBD5E1; white-space: nowrap; animation: ahFadeSlideUp 0.4s ease both; cursor: pointer; z-index: 9; pointer-events: all; }
+.ah-window { position: fixed; bottom: 86px; right: 24px; width: 360px; background: #0F172A; border: 1px solid rgba(139,92,246,0.2); border-radius: 16px; overflow: hidden; display: none; flex-direction: column; z-index: 10; animation: ahSlideUp 0.3s ease both; max-height: calc(100vh - 120px); transition: height 0.25s ease; pointer-events: all; }
+.ah-window.open { display: flex; }
+.ah-header { background: #0B1221; border-bottom: 1px solid rgba(139,92,246,0.15); padding: 14px 16px; display: flex; align-items: center; gap: 10px; }
+.ah-header-avatar { width: 32px; height: 32px; background: linear-gradient(135deg, #7C3AED, #8B5CF6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #F5F3FF; font-family: 'DM Mono', monospace; letter-spacing: -0.5px; flex-shrink: 0; }
+.ah-header-info { flex: 1; }
+.ah-header-name { font-size: 13px; font-weight: 600; color: #F1F5F9; }
+.ah-header-status { font-size: 11px; color: #64748B; display: flex; align-items: center; gap: 4px; }
+.ah-header-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #22C55E; display: inline-block; }
+.ah-close { width: 24px; height: 24px; background: rgba(255,255,255,0.05); border: none; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #64748B; font-size: 16px; line-height: 1; transition: background 0.15s, color 0.15s; }
+.ah-close:hover { background: rgba(255,255,255,0.1); color: #CBD5E1; }
+.ah-messages { overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; min-height: 0; flex: 1 1 auto; scrollbar-width: thin; scrollbar-color: rgba(139,92,246,0.2) transparent; }
+.ah-msg { max-width: 88%; font-size: 13.5px; line-height: 1.55; animation: ahFadeSlideUp 0.25s ease both; }
+.ah-msg.bot { align-self: flex-start; }
+.ah-msg.user { align-self: flex-end; }
+.ah-msg-bubble { padding: 10px 13px; border-radius: 12px; }
+.ah-msg.bot .ah-msg-bubble { background: #1E293B; color: #CBD5E1; border-radius: 4px 12px 12px 12px; border: 0.5px solid rgba(255,255,255,0.06); }
+.ah-msg.user .ah-msg-bubble { background: #7C3AED; color: #fff; border-radius: 12px 4px 12px 12px; font-weight: 500; }
+.ah-msg-label { font-size: 10px; color: #475569; margin-bottom: 4px; font-family: 'DM Mono', monospace; letter-spacing: 0.5px; text-transform: uppercase; }
+.ah-quickreplies { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.ah-qr { background: transparent; border: 1px solid rgba(139,92,246,0.35); color: #8B5CF6; border-radius: 20px; padding: 5px 12px; font-size: 12px; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: background 0.15s, color 0.15s, border-color 0.15s; white-space: nowrap; }
+.ah-qr:hover { background: rgba(139,92,246,0.1); border-color: #8B5CF6; }
+.ah-typing { display: flex; align-items: center; gap: 4px; padding: 10px 13px; background: #1E293B; border-radius: 4px 12px 12px 12px; border: 0.5px solid rgba(255,255,255,0.06); align-self: flex-start; animation: ahFadeSlideUp 0.25s ease both; }
+.ah-typing span { width: 6px; height: 6px; border-radius: 50%; background: #475569; animation: ahBounce 1.2s infinite; }
+.ah-typing span:nth-child(2) { animation-delay: 0.2s; }
+.ah-typing span:nth-child(3) { animation-delay: 0.4s; }
+.ah-input-row { padding: 12px 16px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; gap: 8px; align-items: center; background: #0B1221; }
+.ah-input { flex: 1; background: #1E293B; border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 9px 13px; color: #CBD5E1; font-size: 13px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.15s; height: 38px; }
+.ah-input:focus { border-color: rgba(139,92,246,0.4); }
+.ah-input::placeholder { color: #475569; }
+.ah-send { width: 36px; height: 36px; background: #7C3AED; border: none; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s, transform 0.1s; flex-shrink: 0; }
+.ah-send:hover { background: #8B5CF6; }
+.ah-send:active { transform: scale(0.95); }
+.ah-send svg { width: 16px; height: 16px; }
+.ah-footer { text-align: center; padding: 6px 0 10px; font-size: 10px; color: #334155; font-family: 'DM Mono', monospace; letter-spacing: 0.3px; background: #0B1221; }
+@keyframes ahFadeSlideUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ahSlideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ahBounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-5px); } }
+</style>
+
+<script>
+const ahFlows = {
+  welcome: {
+    text: "Hi there. I'm Atlas, the Authority Hub assistant — I can answer questions about how Authority Hub works, walk you through what's included, or get you set up with a demo.\n\nWhat brings you here today?",
+    replies: [
+      { label: "What does Authority Hub do?", next: "whatIsAh" },
+      { label: "What does it cost?", next: "pricing" },
+      { label: "Who is it for?", next: "whoIsItFor" },
+      { label: "How does the content work?", next: "howItWorks" },
+      { label: "Book a demo", next: "bookDemo" }
+    ]
+  },
+  whatIsAh: {
+    text: "Authority Hub is an AI visibility platform for professionals — it builds the signals that get you recommended by AI systems like ChatGPT, Perplexity, and Gemini.\n\nIt starts with a 30-day GEO/AIO audit that establishes your current AI visibility baseline, then surfaces your top 3 actionable recommendations. From there, Authority Hub builds a 30-day content plan and publishes it automatically to your Google Business Profile, LinkedIn, and Facebook Business via OnlySocial.\n\nThe goal: become the professional AI recommends in your market.",
+    replies: [
+      { label: "What does it cost?", next: "pricing" },
+      { label: "How does the content work?", next: "howItWorks" },
+      { label: "Is my data safe?", next: "trust" },
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "\u2190 Start over", next: "welcome" }
+    ]
+  },
+  pricing: {
+    text: "Authority Hub has two tiers:\n\n\u2022 AH Solo \u2014 $199/mo \u00b7 Individual professional\n\u2022 AH Playbook Hub \u2014 $299/mo \u00b7 Manages up to 5 team members",
+    replies: [
+      { label: "What's included?", next: "whatIsAh" },
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "\u2190 Start over", next: "welcome" }
+    ]
+  },
+  whoIsItFor: {
+    text: "Authority Hub is built for any professional with a niche, a profession, and a market.\n\nMortgage brokers, realtors, financial advisors, lawyers, accountants, insurance professionals \u2014 if you have expertise worth being found for, Authority Hub builds the signals that get you found by AI.\n\nThe platform is profession-neutral. If you compete for clients in a local or regional market, you're the right fit.",
+    replies: [
+      { label: "What does it cost?", next: "pricing" },
+      { label: "How does it work?", next: "howItWorks" },
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "\u2190 Start over", next: "welcome" }
+    ]
+  },
+  howItWorks: {
+    text: "Authority Hub works in four steps:\n\n1. GEO/AIO Audit \u2014 establishes your AI visibility baseline\n2. Top 3 Recommendations \u2014 specific, prioritized actions\n3. 30-Day Content Plan \u2014 built around your entity authority goals\n4. OnlySocial \u2014 automated publishing to GBP, LinkedIn, and Facebook Business\n\nLongform articles go to your Content Vault for timely posting. Micro-content is provided for self-posting on non-mandatory platforms.",
+    replies: [
+      { label: "What's the Content Vault?", next: "contentVault" },
+      { label: "What is OnlySocial?", next: "onlySocial" },
+      { label: "What's in the GEO audit?", next: "geoAudit" },
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "\u2190 Start over", next: "welcome" }
+    ]
+  },
+  contentVault: {
+    text: "The Content Vault is your Authority Hub publishing infrastructure.\n\nLongform articles \u2014 written by the platform's AI and reviewed for your niche \u2014 are held here and published on a schedule aligned to your content plan. Consistent output, no manual effort.",
+    replies: [
+      { label: "What is OnlySocial?", next: "onlySocial" },
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "\u2190 Back", next: "howItWorks" }
+    ]
+  },
+  content360: {
+    text: "OnlySocial is Authority Hub's automated distribution system \u2014 think Gary Vee-style content atomization, built into the platform.\n\nEvery content cycle produces a longform article plus micro-content pieces. The longform goes to your Content Vault. The micro-content is automatically pushed to Google Business Profile, LinkedIn, and Facebook Business \u2014 on schedule, without manual effort.",
+    replies: [
+      { label: "What's the Content Vault?", next: "contentVault" },
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "\u2190 Back", next: "howItWorks" }
+    ]
+  },
+  geoAudit: {
+    text: "The GEO/AIO Audit is the foundation of everything Authority Hub does.\n\nIt evaluates your AI visibility across four factors: Niche Context, Entity Declaration, Platform Corroboration, and AI Recommendation Test. Each factor is scored and weighted to produce your overall AI Recommendability Score.\n\nThe audit identifies your gaps, surfaces the highest-leverage actions, and forms the basis of your 30-day content plan.",
+    replies: [
+      { label: "What does it cost?", next: "pricing" },
+      { label: "How does the content work?", next: "howItWorks" },
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "\u2190 Start over", next: "welcome" }
+    ]
+  },
+  trust: {
+    text: "Trust and data integrity are built into Authority Hub from the ground up.\n\n\ud83c\udde8\ud83c\udde6 Canadian data hosting \u2014 PIPEDA compliant\n\ud83d\udd12 Your data is never sold or shared\n\u2705 You retain full control of your content and account data\n\ud83d\udeb6 Cancel anytime \u2014 your content stays yours",
+    replies: [
+      { label: "Book a demo", next: "bookDemo" },
+      { label: "What does it cost?", next: "pricing" },
+      { label: "\u2190 Start over", next: "welcome" }
+    ]
+  },
+  bookDemo: {
+    text: "Let's get that set up. A couple of quick questions first.\n\nWhat's your profession?",
+    replies: [
+      { label: "Mortgage Broker", next: "demoMarket" },
+      { label: "Realtor", next: "demoMarket" },
+      { label: "Financial Advisor", next: "demoMarket" },
+      { label: "Other professional", next: "demoMarket" }
+    ]
+  },
+  demoMarket: {
+    text: "Got it. What market or region are you primarily serving?",
+    replies: [
+      { label: "Major city", next: "demoChallenge" },
+      { label: "Mid-size city or suburb", next: "demoChallenge" },
+      { label: "Smaller town or rural area", next: "demoChallenge" }
+    ]
+  },
+  demoChallenge: {
+    text: "Last question \u2014 what's your biggest AI visibility challenge right now?",
+    replies: [
+      { label: "I don't show up in AI search", next: "demoEmail" },
+      { label: "I'm not sure where I stand", next: "demoEmail" },
+      { label: "Clients find competitors instead", next: "demoEmail" },
+      { label: "Just want to learn more", next: "demoEmail" }
+    ]
+  },
+  demoEmail: {
+    text: "Perfect. Last step \u2014 drop your email below and I'll send your booking link right away.",
+    replies: []
+  },
+  confirmed: {
+    text: "You're all set \u2014 your booking link is opening now.\n\nLook forward to connecting with you.",
+    replies: [{ label: "\u2190 Start over", next: "welcome" }]
+  }
+};
+
+const BOOKING_URL = "https://calendar.app.google/YpNVukMm8pTRsLmYA";
+
+let ahCurrentNode = "welcome";
+let ahAwaitingEmail = false;
+let ahLeadData = {};
+const ahMsgs = document.getElementById("ahMessages");
+
+function ahResizeWindow() {
+  const win = document.getElementById("ahWindow");
+  const maxH = window.innerHeight - 120;
+  const natural = ahMsgs.scrollHeight + 140;
+  win.style.height = Math.min(natural, maxH) + "px";
+  ahMsgs.scrollTop = ahMsgs.scrollHeight;
+}
+
+function ahAddMsg(text, type) {
+  const wrap = document.createElement("div");
+  wrap.className = "ah-msg " + type;
+  const label = document.createElement("div");
+  label.className = "ah-msg-label";
+  label.textContent = type === "bot" ? "Atlas" : "You";
+  const bubble = document.createElement("div");
+  bubble.className = "ah-msg-bubble";
+  bubble.innerHTML = text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br>");
+  wrap.appendChild(label);
+  wrap.appendChild(bubble);
+  ahMsgs.appendChild(wrap);
+  ahResizeWindow();
+}
+
+function ahAddTyping() {
+  const t = document.createElement("div");
+  t.className = "ah-typing";
+  t.id = "ahTyping";
+  t.innerHTML = "<span></span><span></span><span></span>";
+  ahMsgs.appendChild(t);
+  ahResizeWindow();
+}
+
+function ahRemoveTyping() {
+  const t = document.getElementById("ahTyping");
+  if (t) t.remove();
+}
+
+function ahAddReplies(replies) {
+  if (!replies || replies.length === 0) return;
+  const row = document.createElement("div");
+  row.className = "ah-msg bot";
+  const qr = document.createElement("div");
+  qr.className = "ah-quickreplies";
+  replies.forEach(r => {
+    const btn = document.createElement("button");
+    btn.className = "ah-qr";
+    btn.textContent = r.label;
+    btn.onclick = () => ahSelectReply(r.label, r.next);
+    qr.appendChild(btn);
+  });
+  row.appendChild(qr);
+  ahMsgs.appendChild(row);
+  ahResizeWindow();
+}
+
+function ahSelectReply(label, next) {
+  document.querySelectorAll(".ah-qr").forEach(b => b.disabled = true);
+  ahAddMsg(label, "user");
+  if (ahCurrentNode === "bookDemo") ahLeadData.profession = label;
+  if (ahCurrentNode === "demoMarket") ahLeadData.market = label;
+  if (ahCurrentNode === "demoChallenge") ahLeadData.challenge = label;
+  ahCurrentNode = next;
+  const flow = ahFlows[next];
+  if (!flow) return;
+  ahAddTyping();
+  setTimeout(() => {
+    ahRemoveTyping();
+    ahAddMsg(flow.text, "bot");
+    if (next === "demoEmail") { ahAwaitingEmail = true; }
+    else ahAddReplies(flow.replies);
+  }, 700);
+}
+
+function ahHandleSend() {
+  const inp = document.getElementById("ahInput");
+  const val = inp.value.trim();
+  if (!val) return;
+  inp.value = "";
+  ahAddMsg(val, "user");
+  if (ahAwaitingEmail && val.includes("@")) {
+    ahAwaitingEmail = false;
+    ahAddTyping();
+    fetch("https://dgaimpact.app.n8n.cloud/webhook/atlas-lead-capture", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: val,
+        profession: ahLeadData.profession || "",
+        market: ahLeadData.market || "",
+        challenge: ahLeadData.challenge || "",
+        source: "atlas-widget-ah"
+      })
+    }).catch(() => {});
+    setTimeout(() => {
+      ahRemoveTyping();
+      ahAddMsg(ahFlows.confirmed.text, "bot");
+      ahAddReplies(ahFlows.confirmed.replies);
+    }, 600);
+    return;
+  }
+  ahAddTyping();
+  setTimeout(() => {
+    ahRemoveTyping();
+    ahAddMsg("Good question \u2014 let me make sure you get the right answer. The quickest path is a quick demo where we walk through your specific situation. Want to book one?", "bot");
+    ahAddReplies([
+      { label: "Yes, book a demo", next: "bookDemo" },
+      { label: "Not yet, keep browsing", next: "welcome" }
+    ]);
+  }, 800);
+}
+
+function ahHandleKey(e) {
+  if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ahHandleSend(); }
+}
+
+function openWidget() {
+  document.getElementById("ahTeaser").style.display = "none";
+  document.getElementById("ahBubble").style.display = "none";
+  const win = document.getElementById("ahWindow");
+  win.classList.add("open");
+  win.style.height = "200px";
+  if (ahMsgs.children.length === 0) {
+    setTimeout(() => {
+      ahAddMsg(ahFlows.welcome.text, "bot");
+      ahAddReplies(ahFlows.welcome.replies);
+    }, 300);
+  }
+}
+
+function closeWidget() {
+  document.getElementById("ahWindow").classList.remove("open");
+  document.getElementById("ahBubble").style.display = "flex";
+}
+</script>
+<!-- End Atlas Chat Widget -->
+
+</body>
+</html>
