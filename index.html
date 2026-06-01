@@ -871,12 +871,46 @@
     border-bottom: 1px solid var(--gray-200);
   }
 
-  .pricing-inner { max-width: 900px; margin: 0 auto; }
+  .pricing-inner { max-width: 1100px; margin: 0 auto; }
 
   .pricing-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
+  }
+
+  .addon-callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--white);
+    border: 1px dashed rgba(139, 92, 246, 0.4);
+    border-radius: 12px;
+  }
+
+  .addon-callout .addon-icon { font-size: 1.5rem; flex-shrink: 0; line-height: 1.4; }
+
+  .addon-callout .addon-body strong {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-right: 0.5rem;
+  }
+
+  .addon-callout .addon-plus {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--violet-dark);
+    font-weight: 700;
+  }
+
+  .addon-callout .addon-body p {
+    margin-top: 0.3rem;
+    font-size: 0.88rem;
+    color: var(--gray-600);
+    line-height: 1.55;
   }
 
   .price-card {
@@ -1195,7 +1229,7 @@
     }
     .pricing-grid {
       grid-template-columns: 1fr;
-      max-width: 420px;
+      max-width: 460px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -1278,18 +1312,10 @@
     },
     {
       "@type": "Question",
-      "name": "What's the difference between Solo and Playbook Hub?",
+      "name": "What's the difference between Solo and Hub?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Solo gives you the full AI visibility platform for yourself. Playbook Hub adds referral network capabilities — connect up to 5 professionals as Spokes under your Hub account. Each Spoke gets their own AI visibility audits, content pipeline, Content Vault page, and Trust Network listing. Your Trust Network pages cross-link to each other, creating mutual authority signals. It's a cross-profession referral network that AI can read."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if my referral partners aren't in my market?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No problem. With a Playbook Hub account, your Spokes can be any profession, anywhere in Canada or the US. They don't need to be in the same market or profession as you. Each Spoke gets the full Authority Hub™ experience — audits, content, Content Vault, and Trust Network listing — and your profiles cross-link to each other, strengthening both your AI authority signals."
+        "text": "Solo gives you the full AI visibility platform for yourself. Hub is a custom engagement designed for teams, brokerages, and referral networks — built around your specific setup. Contact us to discuss what a Hub engagement looks like for your situation."
       }
     },
     {
@@ -1363,15 +1389,13 @@
     },
     {
       "@type": "Offer",
-      "name": "Playbook Hub",
-      "price": "299",
-      "priceCurrency": "CAD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "299",
-        "priceCurrency": "CAD",
-        "unitCode": "MON"
-      }
+      "name": "Hub",
+      "description": "Custom pricing — built for teams, brokerages, and referral networks. Contact for quote."
+    },
+    {
+      "@type": "Offer",
+      "name": "Firm Hub",
+      "description": "Custom pricing — for enterprise brokerages and large teams. Dedicated onboarding and full firm configuration."
     }
   ]
 }
@@ -1401,7 +1425,7 @@
   <div class="hero-glow hero-glow-1"></div>
   <div class="hero-glow hero-glow-2"></div>
   <div class="hero-content">
-    <div class="hero-badge">Now in Beta</div>
+    <div class="hero-badge">Now Live</div>
     <h1>Clients Are Asking AI Who to Hire.<br><span class="highlight">Make Sure It's You.</span></h1>
     <p class="hero-sub">Authority Hub™ is the AI Visibility Platform for Professionals. More clients are now asking ChatGPT, Perplexity, and Gemini for recommendations — and those systems don't know you exist. We build the structured signals AI needs to recommend you.</p>
     <div class="hero-actions">
@@ -1648,8 +1672,8 @@
       <div class="feature-card animate-in">
         <div class="feature-icon">🤝</div>
         <div>
-          <h3>Referral Network (Playbook Hub)</h3>
-          <p>Connect up to 5 complementary professionals in your market. Cross-reference each other in AI content, creating mutual authority signals.</p>
+          <h3>Hub Referral Network</h3>
+          <p>Connect complementary professionals in your market. Cross-reference each other in AI content, creating mutual authority signals. Available as part of a Hub engagement.</p>
         </div>
       </div>
     </div>
@@ -1725,23 +1749,42 @@
         </ul>
       </div>
       <div class="price-card animate-in">
-        <div class="price-tier">Playbook Hub</div>
-        <h3>Hub + Spoke Network</h3>
-        <div class="price-amount">$299<span> CAD/mo</span></div>
-        <div class="price-period">Includes up to 5 Spoke accounts</div>
+        <div class="price-tier">Hub</div>
+        <h3>Hub</h3>
+        <div class="price-amount" style="font-size: 1.8rem;">Custom</div>
+        <div class="price-period">Built for teams, brokerages, and referral networks</div>
         <ul class="price-features">
           <li>Everything in Solo, plus:</li>
-          <li>Manage up to 5 referral partners</li>
           <li>Cross-entity content corroboration</li>
-          <li>Two-voice podcast episodes</li>
-          <li>Network authority dashboard</li>
           <li>Referral signal amplification</li>
-          <li>Power Group positioning</li>
+          <li>Dedicated onboarding and configuration</li>
         </ul>
+        <a href="mailto:info@dgaimpact.com" style="display:inline-flex;align-items:center;gap:6px;margin-top:1.5rem;padding:12px 20px;background:var(--violet);color:var(--white);border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--violet-dark)'" onmouseout="this.style.background='var(--violet)'">Contact us for a custom quote →</a>
+      </div>
+      <div class="price-card animate-in">
+        <div class="price-tier">Firm Hub</div>
+        <h3>Firm Hub</h3>
+        <div class="price-amount" style="font-size: 1.8rem;">Custom</div>
+        <div class="price-period">For enterprise brokerages and large teams</div>
+        <ul class="price-features">
+          <li>Everything in Hub, plus:</li>
+          <li>Dedicated onboarding call</li>
+          <li>Full firm configuration</li>
+          <li>Extended team capacity</li>
+          <li>Custom billing via DGA</li>
+        </ul>
+        <a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:1.5rem;padding:12px 20px;background:var(--violet);color:var(--white);border-radius:8px;font-weight:700;font-size:0.9rem;text-decoration:none;transition:background 0.2s;" onmouseover="this.style.background='var(--violet-dark)'" onmouseout="this.style.background='var(--violet)'">Book a call →</a>
+      </div>
+    </div>
+    <div class="addon-callout animate-in">
+      <div class="addon-icon">🌐</div>
+      <div class="addon-body">
+        <strong>Site Launch™</strong><span class="addon-plus">+$79 CAD/mo</span>
+        <p>Done-for-you professional website. Custom domain, compliance footer, and Content Vault integration. Available with any AH plan.</p>
       </div>
     </div>
     <div class="price-note animate-in">
-      <strong>Beta launching April 2026.</strong> Every market has a hard cap on seats per profession. Once your market fills up, new applicants are waitlisted.
+      <strong>Now live.</strong> Every market has a hard cap on seats per profession. Once your market fills up, new applicants are waitlisted.
     </div>
   </div>
 </section>
@@ -1771,11 +1814,6 @@
       <div class="who-icon">⚖️</div>
       <h3>Lawyers</h3>
       <p>Practice area expertise in your jurisdiction, structured for AI comprehension. Be the attorney AI recommends, not just the one with the best Google ad.</p>
-    </div>
-    <div class="who-card animate-in">
-      <div class="who-icon">🩺</div>
-      <h3>Healthcare Practitioners</h3>
-      <p>Credentials and specializations verified through content, not claimed in a bio. AI systems need proof of expertise — Authority Hub™ provides it.</p>
     </div>
     <div class="who-card animate-in">
       <div class="who-icon">💼</div>
@@ -1816,12 +1854,8 @@
         <div class="faq-a">Canada is divided into 165 pre-defined markets based on postal geography. Each market has a hard cap on how many subscribers can hold the same profession — ranging from 5 seats in urban markets down to 2 in seasonal markets. Ontario alone has 94 markets, BC has 23, Alberta has 20, and every other province and territory is covered. Once seats fill for your profession in your market, new applicants are waitlisted.</div>
       </div>
       <div class="faq-item animate-in">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the difference between Solo and Playbook Hub?</div>
-        <div class="faq-a">Solo gives you the full AI visibility platform for yourself. Playbook Hub adds referral network capabilities — connect up to 5 professionals as Spokes under your Hub account. Each Spoke gets their own AI visibility audits, content pipeline, Content Vault page, and Trust Network listing. Your Trust Network pages cross-link to each other, creating mutual authority signals. It's a cross-profession referral network that AI can read.</div>
-      </div>
-      <div class="faq-item animate-in">
-        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if my referral partners aren't in my market?</div>
-        <div class="faq-a">No problem. With a Playbook Hub account, your Spokes can be any profession, anywhere in Canada or the US. They don't need to be in the same market or profession as you. Each Spoke gets the full Authority Hub™ experience — audits, content, Content Vault, and Trust Network listing — and your profiles cross-link to each other, strengthening both your AI authority signals.</div>
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the difference between Solo and Hub?</div>
+        <div class="faq-a">Solo gives you the full AI visibility platform for yourself. Hub is a custom engagement designed for teams, brokerages, and referral networks — built around your specific setup. Contact us to discuss what a Hub engagement looks like for your situation.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How quickly will I see results?</div>
@@ -1843,12 +1877,12 @@
 <section class="cta-section">
   <div class="cta-inner">
     <h2 class="animate-in">Claim Your Market<br>Before It Fills Up</h2>
-    <p class="animate-in">Beta launches April 2026 in Ontario, with national expansion underway. Every market has a hard cap on seats per profession — once they're gone, they're gone.</p>
+    <p class="animate-in">Now live across Canada. Every market has a hard cap on seats per profession — once they're gone, they're gone.</p>
     <div class="cta-buttons animate-in">
       <a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" class="btn-primary">Book a Free Discovery Call →</a>
       <a href="mailto:info@dgaimpact.com" class="btn-secondary">Email Us</a>
     </div>
-    <p class="cta-trust animate-in">165 Canadian markets · 2–5 seats per profession per market · Launching April 2026</p>
+    <p class="cta-trust animate-in">165 Canadian markets · 2–5 seats per profession per market · Live now</p>
   </div>
 </section>
 
@@ -2004,7 +2038,7 @@ const ahFlows = {
     ]
   },
   pricing: {
-    text: "Authority Hub has two tiers:\n\n\u2022 AH Solo \u2014 $199/mo \u00b7 Individual professional\n\u2022 AH Playbook Hub \u2014 $299/mo \u00b7 Manages up to 5 team members",
+    text: "Authority Hub has three tiers:\n\n\u2022 AH Solo \u2014 $199/mo \u00b7 Individual professional\n\u2022 AH Hub \u2014 Custom pricing \u00b7 Built for teams and brokerages\n\u2022 AH Firm Hub \u2014 Custom pricing \u00b7 For enterprise brokerages and large teams\n\nAdd Site Launch\u2122 to any plan for +$79/mo \u2014 done-for-you professional website with compliance footer.",
     replies: [
       { label: "What's included?", next: "whatIsAh" },
       { label: "Book a demo", next: "bookDemo" },
