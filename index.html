@@ -864,6 +864,52 @@
     font-style: italic;
   }
 
+  /* ─── THE DIFFERENCE ─── */
+  .diff-section {
+    padding: 6rem 2rem;
+    background: #071525;
+    border-top: 1px solid rgba(139, 92, 246, 0.12);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .diff-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 75% 30%, rgba(139, 92, 246, 0.09) 0%, transparent 55%),
+      radial-gradient(circle at 25% 70%, rgba(74, 159, 216, 0.05) 0%, transparent 55%);
+  }
+
+  .diff-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .diff-section .section-label { color: var(--violet-light); }
+  .diff-section .section-title { color: var(--white); text-align: center; }
+  .diff-section .section-sub { color: var(--gray-400); max-width: 640px; margin: 1rem auto 0; text-align: center; }
+
+  .diff-callout {
+    margin-top: 3rem;
+    padding: 2rem 2.5rem;
+    background: rgba(139, 92, 246, 0.07);
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  .diff-callout p {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.6;
+    margin: 0;
+  }
+
   /* ─── SITE LAUNCH™ ─── */
   .sl-section {
     padding: 6rem 2rem;
@@ -1763,6 +1809,44 @@
       <div class="step-number">04</div>
       <h3>Publish Everywhere AI Looks</h3>
       <p>Our pipeline auto-publishes to your Content Vault, Google Business Profile, LinkedIn, Trust Network, YouTube, Spotify, Apple Podcasts, and more — multiple platforms from a single content cycle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE DIFFERENCE -->
+<section class="diff-section">
+  <div class="diff-inner">
+    <div class="section-label animate-in">The Difference</div>
+    <h2 class="section-title animate-in">Knowing the Gap Doesn't Close It.</h2>
+    <p class="section-sub animate-in">Every AI visibility tool will show you the problem. Most stop there. Authority Hub™ audits your AI presence, then automatically generates the content and distributes it across every platform AI systems crawl — month after month, without you managing any of it.</p>
+
+    <div class="sl-compare animate-in">
+      <div class="sl-col sl-col-without">
+        <div class="sl-col-label">The Audit-Only Approach</div>
+        <ul>
+          <li>You get a report showing where AI can't find you</li>
+          <li>The report tells you what to fix</li>
+          <li>You write the content — or hire someone to</li>
+          <li>You publish it manually, across platforms</li>
+          <li>You re-run the audit in 90 days to see if it moved</li>
+          <li>It probably didn't move — life got in the way</li>
+        </ul>
+      </div>
+      <div class="sl-col sl-col-with">
+        <div class="sl-col-label">The Authority Hub™ Loop</div>
+        <ul>
+          <li>Audit identifies your exact visibility gaps across ChatGPT, Gemini, and Perplexity</li>
+          <li>Governed content is generated to target each gap directly</li>
+          <li>Your content auto-publishes across 8+ platforms AI systems crawl</li>
+          <li>Next month's audit shows what moved — and what to target next</li>
+          <li>The loop runs whether you look at it or not</li>
+          <li>Your score compounds over time</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="diff-callout animate-in">
+      <p>The only AI visibility platform that goes from audit to automated multi-platform publishing — without a marketing team.</p>
     </div>
   </div>
 </section>
