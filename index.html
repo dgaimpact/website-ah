@@ -2533,7 +2533,7 @@ function ahHandleSend() {
   if (ahAwaitingEmail && val.includes("@")) {
     ahAwaitingEmail = false;
     ahAddTyping();
-    fetch("https://dgaimpact.app.n8n.cloud/webhook/atlas-lead-capture", {
+    fetch("https://ops.mil.dgaimpact.com/webhook/atlas-lead-capture", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
