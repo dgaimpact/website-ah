@@ -101,6 +101,30 @@
   .nav-parent { font-size: 0.75rem !important; color: var(--gray-500) !important; }
   .nav-parent:hover { color: var(--gray-300) !important; }
 
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
   /* ─── HERO (StoryBrand — problem-framed, single column, centered) ─── */
   .hero {
     position: relative;
@@ -1447,13 +1471,41 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: rgba(10, 22, 40, 0.98);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+      padding: 8px 22px 20px 22px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+      display: block;
+      padding: 13px 4px;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .nav-links li:last-child a { border-bottom: none; }
+    .nav-links .nav-cta {
+      display: inline-flex;
+      justify-content: center;
+      margin-top: 12px;
+    }
     .section-title, .cta-inner h2 { font-size: 2rem; }
   }
 
   @media (max-width: 600px) {
     .hero-actions { flex-direction: column; }
     .cta-buttons { flex-direction: column; align-items: center; }
+    footer { padding-bottom: 100px; }
   }
 
   /* ─── SCROLL ANIMATIONS ─── */
@@ -1481,7 +1533,7 @@
       "name": "What is AI visibility and why does it matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Over 51% of web traffic is now automated — AI systems like ChatGPT, Perplexity, and Gemini are constantly evaluating your online presence to determine if you should be recommended to people asking for professionals in your area. If you're not optimized for AI comprehension, you're invisible to this growing channel."
+        "text": "AI visibility is how clearly AI answers can identify and describe your practice when someone asks: your name, your specialty, and why you're a credible answer to their question. As more people ask AI instead of searching, clear, accurate public information about you helps AI describe you correctly."
       }
     },
     {
@@ -1489,7 +1541,7 @@
       "name": "How is this different from SEO or social media marketing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Traditional SEO optimizes for Google's search algorithm. Social media marketing targets human followers. Authority Hub™ optimizes for AI recommendation engines — a fundamentally different audience that requires structured, declarative content rather than persuasive marketing copy. Think of it as an evolution: SEO optimized for search engines, GEO (Generative Engine Optimization) optimizes for AI-generated answers, and AIO (AI Answer Optimization) ensures you're the one AI actually recommends."
+        "text": "Traditional SEO optimizes for search engines. Social media marketing targets human followers on a platform. Authority Hub™ builds structured, declarative content aimed at how AI systems read and describe professionals — a different target than either, not a replacement for the value your existing SEO or social already provides."
       }
     },
     {
@@ -1497,7 +1549,7 @@
       "name": "How much time does this take from me?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Complete a voice-based onboarding interview so we capture your expertise and personality. After that, we handle everything — monthly AI visibility audits, content creation in your voice, and publishing across key platforms. You'll spend about 15 minutes per month reviewing your dashboard."
+        "text": "Complete a voice-based onboarding interview so we capture your expertise and personality. After that, we generate everything automatically — each piece of content publishes about 24 hours after it's generated unless you request a change first. You're responsible for checking that what's generated is accurate and meets your profession's applicable advertising requirements before it goes live; if something needs fixing, use Request Admin Review on that piece and our team will correct it and re-release."
       }
     },
     {
@@ -1505,7 +1557,7 @@
       "name": "Why do I get a monthly AI visibility audit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI visibility isn't a one-time setup — it's a moving target. AI systems constantly re-evaluate who they trust and recommend. Your monthly audit measures how AI systems currently perceive you across five factors: Entity Declaration, Credential Signals, Niche Context, Platform Corroboration, and Temporal Continuity. Each audit identifies your biggest gaps, and that's exactly what drives next month's content — so every cycle is targeted at improving where you need it most."
+        "text": "AI visibility isn't a one-time setup — it's a moving target. Your monthly audit measures your visibility across five categories we track — Entity Declaration, Credential Signals, Niche Context, Platform Corroboration, and Temporal Continuity — Authority Hub's own assessment framework, not a ranking system any AI platform publishes or discloses. Each audit identifies your biggest gaps, and that's exactly what drives next month's content."
       }
     },
     {
@@ -1513,7 +1565,7 @@
       "name": "Where does my content actually get published?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Everywhere AI systems look. Each month, your authority article is published to your Content Vault profile page, then automatically distributed to Google Business Profile and LinkedIn. You also get listed in the Trust Network™ directory, and each article is converted into a podcast episode published to YouTube, Spotify, and Apple Podcasts. That's seven platforms from a single content cycle — with zero effort from you."
+        "text": "Each month, your authority article is published to your Content Vault profile page, then automatically distributed to Google Business Profile and LinkedIn (where connected). A copy is delivered to your inbox by email. You're also listed in the Trust Network™ directory, and each article becomes a podcast episode published to Authority Hub's own YouTube, Spotify, and Apple Podcasts channels — not a channel in your name."
       }
     },
     {
@@ -1521,7 +1573,7 @@
       "name": "How are markets defined and how many seats are available?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Canada is divided into 165 pre-defined markets based on postal geography. Each market has a hard cap on how many subscribers can hold the same profession — ranging from 5 seats in urban markets down to 2 in seasonal markets. Ontario alone has 94 markets, BC has 23, Alberta has 20, and every other province and territory is covered. Once seats fill for your profession in your market, new applicants are waitlisted."
+        "text": "Authority Hub™ covers every province and territory in Canada except Quebec, with 165 pre-defined markets based on postal geography. Every market has a hard cap on how many subscribers can hold the same profession — 5 seats in urban markets, 4 in suburban, 3 in rural, and 2 in seasonal markets — limited access, not sole-professional exclusivity. Once your market fills for your profession, new applicants are waitlisted."
       }
     },
     {
@@ -1537,7 +1589,7 @@
       "name": "How quickly will I see results?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your baseline AI Visibility Score is established in your first week. Most subscribers see measurable improvement within 60–90 days as content cycles build momentum. AI systems need consistent, repeated signals before they change who they recommend — there's no overnight fix, but the trajectory is clear early. The sooner you start, the further ahead you are when your competitors catch on."
+        "text": "Your baseline AI Visibility Score is established in your first week. Your monthly audits show the changes we observe from there. Results vary by profession, market, and starting point — we don't promise a specific timeline, but you'll see your own trend over time."
       }
     },
     {
@@ -1545,7 +1597,7 @@
       "name": "Do you guarantee AI will recommend me?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — and anyone who does is lying. AI platforms are third-party systems outside anyone's control. What we do guarantee is that your online presence will be systematically built with the authority signals AI systems use to evaluate and recommend professionals. We control the infrastructure and the strategy, and we continuously monitor how AI visibility evolves. The results follow from doing the work consistently, which is exactly what the monthly audit-to-content cycle delivers."
+        "text": "No. AI platforms are outside our control. We build structured professional content and track what we observe in recurring audits. No recommendation, ranking or lead is guaranteed."
       }
     },
     {
@@ -1553,7 +1605,7 @@
       "name": "Is my data safe?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Authority Hub™ is built by DGA Impact Inc.™, a federally incorporated Canadian company. All subscriber data is stored in Canada and handled in compliance with PIPEDA and CASL. We never sell your data, and our privacy policy is available on our website."
+        "text": "Your database records are hosted in Canada. Application hosting, payments, and AI content generation use third-party providers (Vercel, Stripe, Google) that aren't represented as Canada-only. We never sell your data, and our privacy policy is available on our website."
       }
     }
   ]
@@ -1623,7 +1675,10 @@
     <img src="ah-logo.png" alt="Authority Hub™" class="nav-logo">
     <div class="nav-name">Authority Hub<span class="tm">™</span></div>
   </div>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="https://dgaimpact.com" class="nav-parent">← DGA Impact Inc.™</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#features">Features</a></li>
@@ -1632,6 +1687,15 @@
     <li><a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" target="_blank" class="nav-cta">Join the Cohort →</a></li>
   </ul>
 </nav>
+<script>
+  function toggleNav() {
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    const isOpen = links.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  }
+</script>
 
 <!-- HERO — StoryBrand problem-framed -->
 <section class="hero">
@@ -1640,7 +1704,7 @@
   <div class="hero-glow hero-glow-2"></div>
   <div class="hero-content">
     <div class="hero-badge">Now Live</div>
-    <h1>Clients Are Asking AI Who to Hire.<br><span class="highlight">Make Sure It's You.</span></h1>
+    <h1>Clients Are Asking AI Who to Hire.<br><span class="highlight">Make Sure AI Can Find and Describe You Accurately.</span></h1>
     <p class="hero-sub">Authority Hub™ is the AI Visibility Platform for Professionals. More clients are now asking ChatGPT, Perplexity, and Gemini for recommendations — and those systems don't know you exist. We build the structured signals AI needs to recommend you.</p>
     <div class="hero-actions">
       <a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" target="_blank" class="btn-primary">Book a Free Discovery Call →</a>
@@ -1704,7 +1768,7 @@
       <div class="guide-pillar animate-in">
         <div class="guide-pillar-icon">🎯</div>
         <h4>Scarcity-Backed Positioning</h4>
-        <p>Limited seats per profession, per market. If you're in, your competitors can't join. If you wait, they might.</p>
+        <p>Limited seats per profession, per market — 2 to 5 depending on market type. Once your market fills for your profession, new applicants are waitlisted.</p>
       </div>
     </div>
   </div>
@@ -1714,7 +1778,7 @@
 <section class="plan-section" id="how">
   <div class="section-label animate-in">The Plan</div>
   <h2 class="section-title animate-in">A Simple 4-Step Path From Invisible to AI-Recommended</h2>
-  <p class="section-sub animate-in">One audit, one content engine, multiple platforms, zero extra work from you. Here's exactly how it runs.</p>
+  <p class="section-sub animate-in">One audit, one content engine, multiple platforms, minimal ongoing effort from you. Here's exactly how it runs.</p>
 
   <!-- Step 1 with snapshot visual -->
   <div class="plan-step-hero animate-in">
@@ -1803,7 +1867,7 @@
     <div class="plan-card animate-in">
       <div class="step-number">03</div>
       <h3>Generate Governed Content</h3>
-      <p>Each month, our Niche Story™ engine reads what your clients are actually talking about right now — then builds a longform authority article and four weeks of social content around it. Structured for AI. Resonant for humans. Approved by you.</p>
+      <p>Each month, our Niche Story™ engine reads what your clients are actually talking about right now — then builds a longform authority article and four weeks of social content around it. Structured for AI. Resonant for humans. Publishes automatically about 24 hours later unless you request a change first.</p>
     </div>
     <div class="plan-card animate-in">
       <div class="step-number">04</div>
@@ -1837,7 +1901,7 @@
         <ul>
           <li>Audit identifies your exact visibility gaps across ChatGPT, Gemini, and Perplexity</li>
           <li>Governed content is generated to target each gap directly</li>
-          <li>Your content auto-publishes across 8+ platforms AI systems crawl</li>
+          <li>Your content auto-publishes to your Content Vault, Google Business Profile and LinkedIn (where connected), plus a podcast episode.</li>
           <li>Next month's audit shows what moved — and what to target next</li>
           <li>The loop runs whether you look at it or not</li>
           <li>Your score compounds over time</li>
@@ -1897,7 +1961,7 @@
         <div class="feature-icon">🏛️</div>
         <div>
           <h3>Content Vault</h3>
-          <p>Your permanent, public-facing authority page on Authority Hub™. Every article, entity declaration, and credential signal lives here — structured with schema markup for AI crawlers.</p>
+          <p>Your public-facing authority page on Authority Hub™. Every article, entity declaration, and credential signal lives here — structured with schema markup for AI crawlers.</p>
         </div>
       </div>
       <div class="feature-card animate-in">
@@ -2050,13 +2114,13 @@
         <div class="price-period">Your own AI visibility machine</div>
         <ul class="price-features">
           <li>Monthly AI visibility audit (GEO score)</li>
-          <li>3 governed content artifacts per month</li>
+          <li>1 authority article + weekly social content each cycle</li>
           <li>Voice Blueprint Profile</li>
-          <li>Auto-publish to Google, LinkedIn, YouTube, Spotify + more</li>
-          <li>Capped market seats per profession</li>
+          <li>Auto-published to Google Business Profile and LinkedIn (where connected), plus email delivery.</li>
+          <li>Podcast episode on Authority Hub's YouTube, Spotify & Apple Podcasts channels</li>
+          <li>2 to 5 seats per profession per market, depending on market type — not sole exclusivity</li>
           <li>Content Vault (your public authority page)</li>
           <li>Trust Network listing</li>
-          <li>Authority Hub™ Podcast episodes</li>
         </ul>
       </div>
       <div class="price-card animate-in">
@@ -2095,7 +2159,7 @@
       </div>
     </div>
     <div class="price-note animate-in">
-      <strong>Now live.</strong> Every market has a hard cap on seats per profession. Once your market fills up, new applicants are waitlisted.
+      <strong>Now live.</strong> Every market has a hard cap on seats per profession — 2 to 5 depending on market type, not sole exclusivity. Once your market fills up, new applicants are waitlisted.
     </div>
   </div>
 </section>
@@ -2109,7 +2173,7 @@
     <div class="who-card animate-in">
       <div class="who-icon">🏦</div>
       <h3>Mortgage Brokers</h3>
-      <p>Become the AI-recommended broker in your market. When someone asks ChatGPT "who's a good mortgage broker in Niagara Falls?" — make sure it's you.</p>
+      <p>Build your AI visibility as a broker in your market. When someone asks ChatGPT "who's a good mortgage broker in Niagara Falls?" — make sure AI can find and describe you accurately.</p>
     </div>
     <div class="who-card animate-in">
       <div class="who-icon">🏡</div>
@@ -2142,27 +2206,27 @@
     <div style="margin-top: 2.5rem;">
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is AI visibility and why does it matter?</div>
-        <div class="faq-a">Over 51% of web traffic is now automated — AI systems like ChatGPT, Perplexity, and Gemini are constantly evaluating your online presence to determine if you should be recommended to people asking for professionals in your area. If you're not optimized for AI comprehension, you're invisible to this growing channel.</div>
+        <div class="faq-a">AI visibility is how clearly AI answers can identify and describe your practice when someone asks: your name, your specialty, and why you're a credible answer to their question. As more people ask AI instead of searching, clear, accurate public information about you helps AI describe you correctly.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is this different from SEO or social media marketing?</div>
-        <div class="faq-a">Traditional SEO optimizes for Google's search algorithm. Social media marketing targets human followers. Authority Hub™ optimizes for AI recommendation engines — a fundamentally different audience that requires structured, declarative content rather than persuasive marketing copy. Think of it as an evolution: SEO optimized for search engines, GEO (Generative Engine Optimization) optimizes for AI-generated answers, and AIO (AI Answer Optimization) ensures you're the one AI actually recommends.</div>
+        <div class="faq-a">Traditional SEO optimizes for search engines. Social media marketing targets human followers on a platform. Authority Hub™ builds structured, declarative content aimed at how AI systems read and describe professionals — a different target than either, not a replacement for the value your existing SEO or social already provides.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much time does this take from me?</div>
-        <div class="faq-a">Complete a voice-based onboarding interview so we capture your expertise and personality. After that, we handle everything — monthly AI visibility audits, content creation in your voice, and publishing across key platforms. You'll spend about 15 minutes per month reviewing your dashboard.</div>
+        <div class="faq-a">Complete a voice-based onboarding interview so we capture your expertise and personality. After that, we generate everything automatically — each piece of content publishes about 24 hours after it's generated unless you request a change first. You're responsible for checking that what's generated is accurate and meets your profession's applicable advertising requirements before it goes live; if something needs fixing, use Request Admin Review on that piece and our team will correct it and re-release.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why do I get a monthly AI visibility audit?</div>
-        <div class="faq-a">AI visibility isn't a one-time setup — it's a moving target. AI systems constantly re-evaluate who they trust and recommend. Your monthly audit measures how AI systems currently perceive you across five factors: Entity Declaration, Credential Signals, Niche Context, Platform Corroboration, and Temporal Continuity. Each audit identifies your biggest gaps, and that's exactly what drives next month's content — so every cycle is targeted at improving where you need it most.</div>
+        <div class="faq-a">AI visibility isn't a one-time setup — it's a moving target. Your monthly audit measures your visibility across five categories we track — Entity Declaration, Credential Signals, Niche Context, Platform Corroboration, and Temporal Continuity — Authority Hub's own assessment framework, not a ranking system any AI platform publishes or discloses. Each audit identifies your biggest gaps, and that's exactly what drives next month's content.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Where does my content actually get published?</div>
-        <div class="faq-a">Everywhere AI systems look. Each month, your authority article is published to your Content Vault profile page, then automatically distributed to Google Business Profile and LinkedIn. You also get listed in the Trust Network™ directory, and each article is converted into a podcast episode published to YouTube, Spotify, and Apple Podcasts. That's seven platforms from a single content cycle — with zero effort from you.</div>
+        <div class="faq-a">Each month, your authority article is published to your Content Vault profile page, then automatically distributed to Google Business Profile and LinkedIn (where connected). A copy is delivered to your inbox by email. You're also listed in the Trust Network™ directory, and each article becomes a podcast episode published to Authority Hub's own YouTube, Spotify, and Apple Podcasts channels — not a channel in your name.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How are markets defined and how many seats are available?</div>
-        <div class="faq-a">Canada is divided into 165 pre-defined markets based on postal geography. Each market has a hard cap on how many subscribers can hold the same profession — ranging from 5 seats in urban markets down to 2 in seasonal markets. Ontario alone has 94 markets, BC has 23, Alberta has 20, and every other province and territory is covered. Once seats fill for your profession in your market, new applicants are waitlisted.</div>
+        <div class="faq-a">Authority Hub™ covers every province and territory in Canada except Quebec, with 165 pre-defined markets based on postal geography. Every market has a hard cap on how many subscribers can hold the same profession — 5 seats in urban markets, 4 in suburban, 3 in rural, and 2 in seasonal markets — limited access, not sole-professional exclusivity. Once your market fills for your profession, new applicants are waitlisted.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's the difference between Solo and Hub?</div>
@@ -2170,15 +2234,15 @@
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How quickly will I see results?</div>
-        <div class="faq-a">Your baseline AI Visibility Score is established in your first week. Most subscribers see measurable improvement within 60–90 days as content cycles build momentum. AI systems need consistent, repeated signals before they change who they recommend — there's no overnight fix, but the trajectory is clear early. The sooner you start, the further ahead you are when your competitors catch on.</div>
+        <div class="faq-a">Your baseline AI Visibility Score is established in your first week. Your monthly audits show the changes we observe from there. Results vary by profession, market, and starting point — we don't promise a specific timeline, but you'll see your own trend over time.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Do you guarantee AI will recommend me?</div>
-        <div class="faq-a">No — and anyone who does is lying. AI platforms are third-party systems outside anyone's control. What we do guarantee is that your online presence will be systematically built with the authority signals AI systems use to evaluate and recommend professionals. We control the infrastructure and the strategy, and we continuously monitor how AI visibility evolves. The results follow from doing the work consistently, which is exactly what the monthly audit-to-content cycle delivers.</div>
+        <div class="faq-a">No. AI platforms are outside our control. We build structured professional content and track what we observe in recurring audits. No recommendation, ranking or lead is guaranteed.</div>
       </div>
       <div class="faq-item animate-in">
         <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is my data safe?</div>
-        <div class="faq-a">Yes. Authority Hub™ is built by DGA Impact Inc.™, a federally incorporated Canadian company. All subscriber data is stored in Canada and handled in compliance with PIPEDA and CASL. We never sell your data, and our privacy policy is available on our website.</div>
+        <div class="faq-a">Your database records are hosted in Canada. Application hosting, payments, and AI content generation use third-party providers (Vercel, Stripe, Google) that aren't represented as Canada-only. We never sell your data, and our privacy policy is available on our website.</div>
       </div>
     </div>
   </div>
@@ -2324,6 +2388,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 @keyframes ahFadeSlideUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes ahSlideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes ahBounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-5px); } }
+
+/* Mobile: drop the teaser text bubble (icon-only), matching the site's other breakpoints — this file has no @media rules for .ah-* classes above this width otherwise. */
+@media (max-width: 600px) {
+  .ah-teaser { display: none; }
+}
 </style>
 
 <script>
