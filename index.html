@@ -1257,6 +1257,69 @@
 
   .price-note strong { color: var(--navy); }
 
+  .cohort-box {
+    margin-top: 2rem;
+    padding: 2rem 2.25rem;
+    background: linear-gradient(135deg, rgba(164, 214, 94, 0.06), rgba(139, 92, 246, 0.05));
+    border: 1.5px solid rgba(164, 214, 94, 0.35);
+    border-radius: 16px;
+    text-align: left;
+  }
+
+  .cohort-box .cohort-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(164, 214, 94, 0.15);
+    border: 1px solid rgba(164, 214, 94, 0.35);
+    color: var(--green-dark);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.75rem;
+  }
+
+  .cohort-box h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .cohort-box p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: 0.85rem;
+  }
+
+  .cohort-box strong { color: var(--navy); }
+
+  .cohort-box .cohort-fineprint {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+  }
+
+  .cohort-box .cohort-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0.5rem;
+    padding: 12px 22px;
+    background: var(--violet);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .cohort-box .cohort-cta:hover { background: var(--violet-dark); }
+
   /* ─── WHO IT'S FOR ─── */
   .who-section {
     padding: 6rem 2rem;
@@ -2160,6 +2223,17 @@
     </div>
     <div class="price-note animate-in">
       <strong>Now live.</strong> Every market has a hard cap on seats per profession — 2 to 5 depending on market type, not sole exclusivity. Once your market fills up, new applicants are waitlisted.
+    </div>
+
+    <div class="cohort-box animate-in">
+      <div class="cohort-label">Founding Cohort</div>
+      <h3>Free Through Dec 31, 2026</h3>
+      <p>Join now and pay nothing through December 31, 2026 — no payment method required to get started.</p>
+      <p><strong>What's included:</strong> full Solo access — monthly AI visibility audit, authority article + weekly social content each cycle, auto-published to Google Business Profile and LinkedIn (where connected), Content Vault, Trust Network listing, and a podcast episode on Authority Hub's own channels. Content publishes automatically about 24 hours after it's generated unless you request a change.</p>
+      <p><strong>What happens after:</strong> at least 14 days before the cohort ends, we'll email you the plan and price for continuing. Billing only starts if you opt in — if you don't, your subscription simply ends and you're not charged.</p>
+      <p><strong>Your Market Seat:</strong> held the same as any other subscriber for as long as you're active. If you don't continue, your seat is released.</p>
+      <p class="cohort-fineprint">By joining, you agree Authority Hub can use your account data, content, and activity during the cohort to evaluate and improve the platform, consistent with our <a href="/privacy" style="color: var(--violet-dark);">Privacy Policy</a>.</p>
+      <a href="https://calendar.app.google/YpNVukMm8pTRsLmYA" target="_blank" class="cohort-cta">Book a call to see if the cohort is open for your profession and market</a>
     </div>
   </div>
 </section>
